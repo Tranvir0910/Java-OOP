@@ -1,3 +1,3 @@
-# Java-OOP
+# JavaCourse
 
-Object-Oriented Programming Concepts with Java using BlueJ Environment.
+Java Programming: Solving Problems with Software
