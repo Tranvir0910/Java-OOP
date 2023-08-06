@@ -24,12 +24,12 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 
 ## Update Algorithm
 **Method : findStopCodon (dnaStr, startIndex, stopCodon)**
-1 Find stopCodon starting from (startIndex + 3), call this result curr Index
-2 As long as curr Index is not equal to -1
-  3 Check if (curr Index - startIndex) is a multiple of 3
-    4 If so, curr Index is your answer
-    5 If not, update curr Index to the index of the next stopCodon, starting from (currIndex + 1)
-6 Your answer is dnaStr.length()
+- Find stopCodon starting from (startIndex + 3), call this result curr Index
+- As long as curr Index is not equal to -1
+  + Check if (curr Index - startIndex) is a multiple of 3
+    + If so, curr Index is your answer
+    + If not, update curr Index to the index of the next stopCodon, starting from (currIndex + 1)
+- Your answer is dnaStr.length()
 
 **Split into Two Problems (Abstract Out)**
 1. Find first occurrence of "ATG," call its index startIndex
