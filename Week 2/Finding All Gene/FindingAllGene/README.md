@@ -15,12 +15,12 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 
 ## Algorithm in this article
 
-1 Find first occurrence of "ATG" and call its index startIndex
-2 Find the "TAA" starting from (startIndex + 3), call this result currIndex
-3 As long as
-  4 Check if (currIndex - startIndex) is a multiple of 3
-    5 If so, the text between startIndex and currIndex + 3 is your answer
-    6 If not, update currIndex to the index of the next "TAA,” starting from (curr Index + 1)
+- Find first occurrence of "ATG" and call its index startIndex
+- Find the "TAA" starting from (startIndex + 3), call this result currIndex
+- As long as
+  + Check if (currIndex - startIndex) is a multiple of 3
+    + If so, the text between startIndex and currIndex + 3 is your answer
+    + If not, update currIndex to the index of the next "TAA,” starting from (curr Index + 1)
 
 ## Update Algorithm
 **Method : findStopCodon (dnaStr, startIndex, stopCodon)**
@@ -32,20 +32,22 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 - Your answer is dnaStr.length()
 
 **Split into Two Problems (Abstract Out)**
-1. Find first occurrence of "ATG," call its index startIndex
-2. If startIndex is -1, then your answer is the empty string
-3. findStopCodon (dnaStr, startIndex, "TAA") and call the result TAAindex
-4. findStopCodon (dnaStr, startIndex, "TAG") and call the result TAGindex
-5. findStopCodon (dnaStr, startIndex, "TGA") and call the result TGAindex
-6. Take the smallest of taaIndex, tgaIndex, and tagIndex: call it min
-7. If minIndex is dnaStr.length(), your answer is the empty string
-8. Your answer is the text from startIndex to minIndex + 3
+
+- Find first occurrence of "ATG," call its index startIndex
+- If startIndex is -1, then your answer is the empty string
+- findStopCodon (dnaStr, startIndex, "TAA") and call the result TAAindex
+- findStopCodon (dnaStr, startIndex, "TAG") and call the result TAGindex
+- findStopCodon (dnaStr, startIndex, "TGA") and call the result TGAindex
+- Take the smallest of taaIndex, tgaIndex, and tagIndex: call it min
+- If minIndex is dnaStr.length(), your answer is the empty string
+- Your answer is the text from startIndex to minIndex + 3
 
 **Logical AND/OR**
-1. Compare taaIndex and tgaIndex, choose the smaller value, and store it in minIndex.
-2. Compare minIndex and tagIndex, choose the smaller value, and store it in minIndex.
-3. If minIndex is still -1, return an empty string as there is no valid gene.
-4. Otherwise, return the substring from StartIndex to minIndex + 3 as the valid gene.
+
+- Compare taaIndex and tgaIndex, choose the smaller value, and store it in minIndex.
+- Compare minIndex and tagIndex, choose the smaller value, and store it in minIndex.
+- If minIndex is still -1, return an empty string as there is no valid gene.
+- Otherwise, return the substring from StartIndex to minIndex + 3 as the valid gene.
 
 
 
