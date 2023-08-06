@@ -4,7 +4,6 @@ A protein is a part of the DNA strand marked by start and stop codons (DNA tripl
 that is a multiple of 3 letters long.
 */
 
-import edu.duke.*;
 import java.io.*;
 
 public class TagFinder {
