@@ -46,7 +46,7 @@ public class RunMain {
     public static void main(String[] args) throws Exception {
         testFindStopCodon();
         testHowMany();
-        Part3 part3 = new Part3();
-        part3.testCountGenes();
+        //Part3 part3 = new Part3();
+        //part3.testCountGenes();
     }
 }

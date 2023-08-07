@@ -1,5 +1,7 @@
-public class Part1 {
 
+import edu.duke.*;
+
+public class Part1 {
     public int findStopCodon(String dna, int startIndex, String stopCodon){
         
         int currIdx = dna.indexOf(stopCodon, startIndex + 3);
@@ -41,13 +43,39 @@ public class Part1 {
     }
 
     public void printAllGene(String dna){
+        // int startIdx = 0;
         while (true) {
             String currentGene = findGene(dna);
             if (currentGene.isEmpty()) {
                 break;
             }
             System.out.println("Gene found: " + currentGene);
+            // startIdx = dna.indexOf(currentGene, startIdx) + currentGene.length();
             dna = dna.substring(dna.indexOf(currentGene) + currentGene.length());
         }
     }
+    
+    public StorageResource getAllGenes(String dna) {
+        StorageResource geneList = new StorageResource();
+        while (true) {
+            String gene = findGene(dna);
+            if (gene.isEmpty()) {
+                break;
+            }
+            geneList.add(gene);
+            dna = dna.substring(dna.indexOf(gene) + gene.length());
+        }
+        return geneList;
+    }
+     
+    public void test(){
+        Part1 part1 = new Part1();
+        String dna = "ATGTAAGATGCCCTAGTATGTAAGATGCCCTAGT";
+        StorageResource genes = part1.getAllGenes(dna);
+        
+        for (String gene : genes.data()) {
+            System.out.println("Gene: " + gene);
+        }
+    }
+    
 }
