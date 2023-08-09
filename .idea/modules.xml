@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Week 2/Finding A Gene/Finding A Gene.iml" filepath="$PROJECT_DIR$/Week 2/Finding A Gene/Finding A Gene.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week 2/FindingAllGene/FindingAllGene.iml" filepath="$PROJECT_DIR$/Week 2/FindingAllGene/FindingAllGene.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java-OOP.iml" filepath="$PROJECT_DIR$/.idea/Java-OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week 3/MaximumTemperature/MaximumTemperature.iml" filepath="$PROJECT_DIR$/Week 3/MaximumTemperature/MaximumTemperature.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week 3/PersingExportData/PersingExportData.iml" filepath="$PROJECT_DIR$/Week 3/PersingExportData/PersingExportData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week 2/StringsSecondAssignments/StringsSecondAssignments.iml" filepath="$PROJECT_DIR$/Week 2/StringsSecondAssignments/StringsSecondAssignments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week 1/Week 1.iml" filepath="$PROJECT_DIR$/Week 1/Week 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week 2/Week 2.iml" filepath="$PROJECT_DIR$/Week 2/Week 2.iml" />
+    </modules>
+  </component>
+</project>

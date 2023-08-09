@@ -29,15 +29,15 @@ public class Part3 {
 
         int minIndex = 0;
 
-        if (TAAindex == -1 || (TGAindex != -1 && TGAindex < TAAindex))
+        if (TAAindex == -1 || (TGAindex != -1 && TGAindex < TAAindex)){
             minIndex = TGAindex;
-        else
+        }else{
             minIndex = TAAindex;
+        }
         
-        
-        if (minIndex == -1 || (TAGindex != -1 && TAGindex < minIndex))
+        if (minIndex == -1 || (TAGindex != -1 && TAGindex < minIndex)){
             minIndex = TAGindex;
-
+        }
         if ( minIndex == -1 ) return "";
 
         return dna.substring(startIdx, minIndex + 3);
@@ -69,25 +69,26 @@ public class Part3 {
         return geneList;
     }
     
-    /*
+    
     public void test(){
-        Part1 part1 = new Part1();
-        String dna = "ATGTAAGATGCCCTAGTATGTAAGATGCCCTAGT";
-        StorageResource genes = part1.getAllGenes(dna);
-        
+        FileResource fr = new FileResource();
+        StorageResource genes = getAllGenes(fr.asString().toUpperCase());
+        int cnt = 0;
         for (String gene : genes.data()) {
             System.out.println("Gene: " + gene);
+            cnt++;
         }
+        System.out.println(cnt);
     }
-    */
+    
     
     public void processGenes(){
         FileResource fr = new FileResource();
         StorageResource genes = getAllGenes(fr.asString());
         int cnt1 = 0;
         for (String gene : genes.data()) {
-            if(gene.length() > 9){
-                System.out.println("Gene length > 9 : " + gene);
+            if(gene.length() > 60){
+                System.out.println("Gene length > 60 : " + gene);
                 cnt1++;
             }
         }
@@ -102,5 +103,16 @@ public class Part3 {
             }
         }
         System.out.println(cnt2);
+        System.out.println(part2.countCTG(fr.asString()));
+        
+        int max = 0;
+        String geneMax = "";
+        for (String gene : genes.data()) {
+            if(gene.length() > max){
+                geneMax = gene;
+            }
+        }
+        System.out.println(geneMax.length());
+        
     }
 }

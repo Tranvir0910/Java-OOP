@@ -17,14 +17,14 @@ public class Part1 {
     }
 
     public String findGene(String dna){
-        int startIdx = dna.indexOf("ATG");
+        int startIdx = dna.indexOf("atg");
         if (startIdx == -1) {
             return "";
         }
         
-        int TAAindex = findStopCodon(dna, startIdx, "TAA");
-        int TAGindex = findStopCodon(dna, startIdx, "TAG");
-        int TGAindex = findStopCodon(dna, startIdx, "TGA");
+        int TAAindex = findStopCodon(dna, startIdx, "taa");
+        int TAGindex = findStopCodon(dna, startIdx, "tag");
+        int TGAindex = findStopCodon(dna, startIdx, "tga");
 
         int minIndex = 0;
 
@@ -69,13 +69,14 @@ public class Part1 {
     }
      
     public void test(){
-        Part1 part1 = new Part1();
-        String dna = "ATGTAAGATGCCCTAGTATGTAAGATGCCCTAGT";
-        StorageResource genes = part1.getAllGenes(dna);
-        
+        FileResource fr = new FileResource();
+        StorageResource genes = getAllGenes(fr.asString());
+        int cnt = 0;
         for (String gene : genes.data()) {
             System.out.println("Gene: " + gene);
+            cnt++;
         }
+        System.out.println(cnt);
     }
     
 }
