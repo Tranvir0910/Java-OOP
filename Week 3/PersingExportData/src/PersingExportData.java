@@ -54,15 +54,17 @@ public class PersingExportData {
 
         String result1 = countryInfo(parser, "Nauru");
         System.out.println(result1);
-        // Reset the parser
         parser = fr.getCSVParser();
+        System.out.println("--------------------------------------------");
 
-        listExportersTwoProducts(parser, "gold", "diamonds");
+        listExportersTwoProducts(parser, "cotton", "flowers");
         parser = fr.getCSVParser();
+        System.out.println("--------------------------------------------");
 
-        int result2 = numberOfExporters(parser, "sugar");
+        int result2 = numberOfExporters(parser, "cocoa");
         System.out.println(result2);
         parser = fr.getCSVParser();
+        System.out.println("--------------------------------------------");
 
         bigExporters(parser, "$999,999,999,999");
     }
